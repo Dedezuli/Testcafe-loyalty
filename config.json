@@ -1,0 +1,19 @@
+{
+  "skipJsErrors": true,
+  "env": "dev",
+  "url": {
+    "dev": {
+      "frontoffice": "https://webdev.chakrarewards.com"
+    },
+    "stg": {
+      "frontoffice": "https://staging.investree.ph"
+    }
+  },
+  "default": {
+    "password": "Brandal17",
+    "pin" : "1 2 3 4 5 6"
+  },
+  "report": {
+    "save_to_db": true
+  }
+}

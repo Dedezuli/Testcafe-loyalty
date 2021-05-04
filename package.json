@@ -1,0 +1,48 @@
+{
+	"name": "qa-frontend-testcafe",
+	"version": "1.0.0",
+	"description": "Frontend testing using TestCafe",
+	"scripts": {
+		"test": "node scripts/beautify.js && npx testcafe",
+		"test:chrome": "node scripts/beautify.js && npx testcafe \"chrome:emulation:width=1366;height=768;mobile=false\"",
+		"test:firefox": "node scripts/beautify.js && npx testcafe \"firefox:emulation:width=1366;height=768;mobile=false\"",
+		"test:chrome:headless": "npx testcafe \"chrome:headless:emulation:width=1366;height=768;mobile=false\"",
+		"test:firefox:headless": "npx testcafe \"firefox:headless:emulation:width=1366;height=768;mobile=false\"",
+		"test:chromium:headless": "npx testcafe \"chromium:headless:emulation:width=1366;height=768;mobile=false\"",
+		"allure:gen": "sh scripts/allureResultsDetail.sh && allure generate allure/allure-results --clean -o allure/allure-report",
+		"allure:open": "allure open allure/allure-report -p 8080",
+		"beautify": "node scripts/beautify.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Raizan/qa-frontend-testcafe.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Raizan/qa-frontend-testcafe/issues"
+	},
+	"homepage": "https://github.com/Raizan/qa-frontend-testcafe#readme",
+	"dependencies": {
+		"app-root-path": "^3.0.0",
+		"bluebird": "^3.7.2",
+		"edit-json-file": "^1.3.2",
+		"faker": "^4.1.0",
+		"knex": "^0.20.11",
+		"module-alias": "^2.2.2",
+		"mysql": "^2.18.1",
+		"pg": "^7.18.2",
+		"random-js": "^2.1.0",
+		"superagent": "^5.1.2",
+		"testcafe": "^1.7.0",
+		"testcafe-reporter-allure": "^1.0.5"
+	},
+	"devDependencies": {
+		"js-beautify": "^1.10.2"
+	},
+	"_moduleAliases": {
+		"lib": "lib",
+		"model": "model",
+		"resources": "resources"
+	}
+}
